@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital IT Move — Digital Marketing, Engineered to Move</title>
+<meta name="description" content="Digital IT Move is a digital marketing company headquartered in Australia with branches in India and Dubai. SEO, paid media, social, content and web — built to move your numbers.">
+<link rel="icon" type="image/png" href="logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --navy-950:#080d24;
+    --navy-900:#0b1330;
+    --navy-800:#131d47;
+    --blue-500:#1e7fe0;
+    --blue-400:#3b9bf0;
+    --blue-300:#63b7ff;
+    --blue-100:#e7f2ff;
+    --bg:#f7f9fc;
+    --bg-alt:#ffffff;
+    --ink:#0b1330;
+    --slate:#5b6478;
+    --slate-light:#8b93a7;
+    --line:#e3e8f2;
+    --radius:14px;
+    --maxw:1180px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  h1,h2,h3,.display{
+    font-family:'Space Grotesk', sans-serif;
+    letter-spacing:-0.02em;
+    margin:0;
+  }
+
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--blue-500);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:16px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:8px;height:8px;
+    background:linear-gradient(135deg,var(--blue-300),var(--blue-500));
+    display:inline-block;
+    border-radius:2px;
+  }
+
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  section{position:relative;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 32px;}
+
+  /* ===== focus visibility ===== */
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+    outline:2px solid var(--blue-500);
+    outline-offset:3px;
+    border-radius:4px;
+  }
+
+  /* ===== NAV ===== */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    padding:18px 0;
+    transition:background .35s ease, box-shadow .35s ease, padding .35s ease, backdrop-filter .35s ease;
+  }
+  header.scrolled{
+    background:rgba(247,249,252,0.86);
+    backdrop-filter:blur(14px);
+    box-shadow:0 1px 0 var(--line);
+    padding:12px 0;
+  }
+  nav{
+    max-width:var(--maxw); margin:0 auto; padding:0 32px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .brand{display:flex; align-items:center; gap:10px;}
+  .brand img{height:36px; width:auto;}
+  .brand-text{font-family:'Space Grotesk'; font-weight:600; font-size:17px; color:var(--navy-900);}
+  .brand-text span{color:var(--blue-500);}
+
+  .nav-links{display:flex; gap:34px; list-style:none; margin:0; padding:0;}
+  .nav-links a{
+    font-size:14.5px; font-weight:500; color:var(--slate);
+    position:relative; padding:4px 0;
+    transition:color .2s ease;
+  }
+  .nav-links a::after{
+    content:""; position:absolute; left:0; bottom:-2px; width:0; height:2px;
+    background:linear-gradient(90deg,var(--blue-500),var(--blue-300));
+    transition:width .25s ease;
+  }
+  .nav-links a:hover{color:var(--navy-900);}
+  .nav-links a:hover::after{width:100%;}
+
+  .nav-cta{
+    font-size:14px; font-weight:600; color:#fff;
+    background:var(--navy-900);
+    padding:10px 20px; border-radius:999px;
+    transition:transform .2s ease, background .2s ease;
+    display:inline-flex; align-items:center; gap:8px;
+  }
+  .nav-cta:hover{background:var(--blue-500); transform:translateY(-2px);}
+
+  .nav-toggle{display:none; background:none; border:none; cursor:pointer; padding:6px;}
+  .nav-toggle span{display:block; width:24px; height:2px; background:var(--navy-900); margin:5px 0; transition:.3s;}
+
+  /* ===== HERO ===== */
+  .hero{
+    padding:168px 0 110px;
+    position:relative;
+    overflow:hidden;
+    background:
+      radial-gradient(ellipse 900px 500px at 82% -10%, rgba(59,155,240,0.16), transparent 60%),
+      var(--bg);
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1.05fr 0.95fr; gap:40px; align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(38px,5vw,62px);
+    line-height:1.04;
+    color:var(--navy-900);
+    font-weight:700;
+  }
+  .hero h1 .accent{
+    background:linear-gradient(100deg,var(--blue-500),var(--blue-300) 60%, #7dd3fc);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .hero p.lead{
+    margin-top:22px; font-size:18px; line-height:1.65; color:var(--slate); max-width:520px;
+  }
+  .hero-actions{display:flex; gap:16px; margin-top:36px; flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--navy-900); color:#fff; font-weight:600; font-size:15px;
+    padding:15px 28px; border-radius:999px; border:none; cursor:pointer;
+    display:inline-flex; align-items:center; gap:10px;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+    box-shadow:0 10px 24px -12px rgba(11,19,48,0.5);
+  }
+  .btn-primary:hover{background:var(--blue-500); transform:translateY(-3px); box-shadow:0 16px 30px -12px rgba(30,127,224,0.55);}
+  .btn-secondary{
+    background:transparent; color:var(--navy-900); font-weight:600; font-size:15px;
+    padding:15px 26px; border-radius:999px; border:1.5px solid var(--line); cursor:pointer;
+    transition:border-color .25s ease, transform .25s ease, background .25s ease;
+  }
+  .btn-secondary:hover{border-color:var(--blue-400); background:var(--blue-100); transform:translateY(-3px);}
+
+  .hero-stats{display:flex; gap:34px; margin-top:52px; flex-wrap:wrap;}
+  .hero-stats div{min-width:90px;}
+  .hero-stats .num{
+    font-family:'Space Grotesk'; font-size:30px; font-weight:700; color:var(--navy-900);
+  }
+  .hero-stats .lbl{font-size:12.5px; color:var(--slate-light); margin-top:2px;}
+
+  /* hero visual */
+  .hero-visual{position:relative; display:flex; align-items:center; justify-content:center;}
+  .logo-stage{
+    position:relative; width:100%; max-width:440px; aspect-ratio:1/1;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .logo-stage img{
+    width:78%; z-index:2; filter:drop-shadow(0 24px 40px rgba(11,19,48,0.18));
+    animation:float 6s ease-in-out infinite;
+  }
+  @keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-14px);}
+  }
+  .ring{
+    position:absolute; border-radius:50%; border:1.5px dashed rgba(30,127,224,0.28);
+  }
+  .ring.r1{width:100%; height:100%; animation:spin 40s linear infinite;}
+  .ring.r2{width:76%; height:76%; border-color:rgba(11,19,48,0.14); animation:spin 30s linear infinite reverse;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+
+  .pixel-dot{
+    position:absolute; border-radius:3px;
+    background:linear-gradient(135deg,var(--blue-300),var(--blue-500));
+    opacity:0; animation:pixelIn .6s ease forwards;
+  }
+
+  .arrow-track{position:absolute; inset:0; pointer-events:none;}
+  .arrow-track svg{width:100%; height:100%;}
+  .arrow-path{
+    fill:none; stroke:url(#arrowGrad); stroke-width:2.5; stroke-linecap:round;
+    stroke-dasharray:900; stroke-dashoffset:900;
+    animation:draw 2.4s cubic-bezier(.65,0,.35,1) .4s forwards;
+  }
+  @keyframes draw{to{stroke-dashoffset:0;}}
+  @keyframes pixelIn{to{opacity:1;}}
+
+  /* ===== marquee strip ===== */
+  .marquee{
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    background:var(--bg-alt); overflow:hidden; padding:18px 0;
+  }
+  .marquee-track{display:flex; gap:60px; width:max-content; animation:scroll-x 26s linear infinite;}
+  .marquee-track span{
+    font-family:'IBM Plex Mono'; font-size:13px; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--slate-light); display:flex; align-items:center; gap:10px; white-space:nowrap;
+  }
+  .marquee-track span::before{content:"◆"; color:var(--blue-400); font-size:9px;}
+  @keyframes scroll-x{from{transform:translateX(0);} to{transform:translateX(-50%);}}
+
+  /* ===== SECTION HEADERS ===== */
+  .sec-head{max-width:640px; margin-bottom:56px;}
+  .sec-head h2{font-size:clamp(28px,3.4vw,40px); color:var(--navy-900); font-weight:700; line-height:1.15;}
+  .sec-head p{margin-top:16px; font-size:16.5px; color:var(--slate); line-height:1.65;}
+
+  section.panel{padding:110px 0;}
+  section.panel.alt{background:var(--bg-alt); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+
+  /* ===== reveal on scroll ===== */
+  .reveal{opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+  .reveal-stag > *{opacity:0; transform:translateY(24px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal-stag.in > *{opacity:1; transform:translateY(0);}
+  .reveal-stag.in > *:nth-child(1){transition-delay:.02s;}
+  .reveal-stag.in > *:nth-child(2){transition-delay:.09s;}
+  .reveal-stag.in > *:nth-child(3){transition-delay:.16s;}
+  .reveal-stag.in > *:nth-child(4){transition-delay:.23s;}
+  .reveal-stag.in > *:nth-child(5){transition-delay:.30s;}
+  .reveal-stag.in > *:nth-child(6){transition-delay:.37s;}
+
+  /* ===== SERVICES ===== */
+  .services-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:22px;
+  }
+  .service-card{
+    background:var(--bg); border:1px solid var(--line); border-radius:var(--radius);
+    padding:32px 28px; position:relative; overflow:hidden;
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    cursor:default;
+  }
+  .service-card::before{
+    content:""; position:absolute; top:0; left:0; right:0; height:3px;
+    background:linear-gradient(90deg,var(--blue-500),var(--blue-300));
+    transform:scaleX(0); transform-origin:left; transition:transform .35s ease;
+  }
+  .service-card:hover{
+    transform:translateY(-6px); box-shadow:0 20px 40px -22px rgba(11,19,48,0.25); border-color:transparent;
+  }
+  .service-card:hover::before{transform:scaleX(1);}
+  .service-icon{
+    width:46px; height:46px; border-radius:11px;
+    background:linear-gradient(135deg,var(--navy-900),var(--navy-800));
+    display:flex; align-items:center; justify-content:center; margin-bottom:20px;
+    transition:background .3s ease, transform .3s ease;
+  }
+  .service-card:hover .service-icon{background:linear-gradient(135deg,var(--blue-500),var(--blue-300)); transform:rotate(-6deg) scale(1.05);}
+  .service-icon svg{width:22px; height:22px; stroke:#fff; fill:none; stroke-width:1.8;}
+  .service-card h3{font-size:18px; font-weight:600; color:var(--navy-900); margin-bottom:10px;}
+  .service-card p{font-size:14.5px; color:var(--slate); line-height:1.6; margin:0;}
+
+  /* ===== PROCESS / SIGNATURE TRAJECTORY ===== */
+  .trajectory{position:relative; padding-top:20px;}
+  .traj-line{
+    position:absolute; left:0; right:0; top:38px; height:2px;
+    background:linear-gradient(90deg,var(--line) 0%, var(--blue-300) 100%);
+    z-index:0;
+  }
+  .traj-steps{display:grid; grid-template-columns:repeat(4,1fr); gap:20px; position:relative; z-index:1;}
+  .traj-step{display:flex; flex-direction:column; gap:16px;}
+  .traj-node{
+    width:14px; height:14px; border-radius:50%; background:var(--bg-alt);
+    border:2.5px solid var(--blue-500); position:relative;
+  }
+  .traj-step .traj-mono{font-family:'IBM Plex Mono'; font-size:11.5px; color:var(--blue-500); letter-spacing:0.05em;}
+  .traj-step h3{font-size:16.5px; font-weight:600; color:var(--navy-900); margin:6px 0 8px;}
+  .traj-step p{font-size:14px; color:var(--slate); line-height:1.6; margin:0;}
+
+  /* ===== GLOBAL PRESENCE ===== */
+  .presence-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .office-card{
+    background:linear-gradient(155deg,var(--navy-900),var(--navy-950));
+    border-radius:18px; padding:34px 30px; color:#fff; position:relative; overflow:hidden;
+    transition:transform .35s ease;
+  }
+  .office-card:hover{transform:translateY(-6px);}
+  .office-card::after{
+    content:""; position:absolute; width:220px; height:220px; border-radius:50%;
+    background:radial-gradient(circle, rgba(59,155,240,0.35), transparent 70%);
+    top:-90px; right:-90px; transition:transform .5s ease;
+  }
+  .office-card:hover::after{transform:scale(1.3);}
+  .office-card.hq{background:linear-gradient(155deg,var(--blue-500),#0f4c9e);}
+  .office-tag{
+    font-family:'IBM Plex Mono'; font-size:11px; letter-spacing:0.14em; text-transform:uppercase;
+    color:rgba(255,255,255,0.65); background:rgba(255,255,255,0.08);
+    display:inline-block; padding:5px 11px; border-radius:999px; margin-bottom:20px;
+  }
+  .office-card h3{font-size:23px; font-weight:600; margin-bottom:6px; position:relative; z-index:1;}
+  .office-card .city-sub{font-size:13.5px; color:rgba(255,255,255,0.7); margin-bottom:18px;}
+  .office-card ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:9px; position:relative; z-index:1;}
+  .office-card li{font-size:13.5px; color:rgba(255,255,255,0.82); display:flex; align-items:center; gap:9px;}
+  .office-card li::before{content:""; width:5px; height:5px; border-radius:50%; background:#7dd3fc; flex:none;}
+
+  /* ===== WHY US / stats ===== */
+  .why-wrap{display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;}
+  .why-list{display:flex; flex-direction:column; gap:26px;}
+  .why-item{display:flex; gap:18px;}
+  .why-num{
+    font-family:'Space Grotesk'; font-size:15px; font-weight:700; color:var(--blue-500);
+    width:34px; height:34px; border-radius:9px; background:var(--blue-100);
+    display:flex; align-items:center; justify-content:center; flex:none;
+  }
+  .why-item h3{font-size:16.5px; font-weight:600; color:var(--navy-900); margin-bottom:6px;}
+  .why-item p{font-size:14.5px; color:var(--slate); line-height:1.6; margin:0;}
+
+  .stat-panel{
+    background:var(--navy-900); border-radius:20px; padding:44px 38px;
+    display:grid; grid-template-columns:1fr 1fr; gap:32px;
+  }
+  .stat-panel .stat .num{
+    font-family:'Space Grotesk'; font-size:38px; font-weight:700; color:#fff;
+  }
+  .stat-panel .stat .lbl{font-size:12.5px; color:rgba(255,255,255,0.55); margin-top:6px; line-height:1.5;}
+  .stat-panel .stat{border-left:2px solid rgba(255,255,255,0.12); padding-left:18px;}
+
+  /* ===== CONTACT ===== */
+  .contact-wrap{
+    display:grid; grid-template-columns:1fr 1fr; gap:50px;
+    background:var(--navy-900); border-radius:24px; padding:64px 60px; color:#fff; position:relative; overflow:hidden;
+  }
+  .contact-wrap::before{
+    content:""; position:absolute; inset:0;
+    background:radial-gradient(circle 500px at 90% 10%, rgba(59,155,240,0.22), transparent 65%);
+    pointer-events:none;
+  }
+  .contact-left h2{font-size:clamp(26px,3vw,36px); font-weight:700; line-height:1.2;}
+  .contact-left p{margin-top:16px; font-size:15.5px; color:rgba(255,255,255,0.68); line-height:1.65; max-width:400px;}
+  .contact-email{
+    margin-top:30px; display:inline-flex; align-items:center; gap:12px;
+    font-family:'IBM Plex Mono'; font-size:16px; color:#fff;
+    background:rgba(255,255,255,0.08); padding:14px 20px; border-radius:12px;
+    border:1px solid rgba(255,255,255,0.14); cursor:pointer; transition:background .25s ease;
+  }
+  .contact-email:hover{background:rgba(255,255,255,0.16);}
+  .contact-email svg{width:18px; height:18px; stroke:#7dd3fc; fill:none; stroke-width:1.8; flex:none;}
+  .copy-note{
+    font-size:12px; color:var(--blue-300); margin-top:10px; height:16px; opacity:0; transition:opacity .25s ease;
+  }
+  .copy-note.show{opacity:1;}
+
+  form.contact-form{display:flex; flex-direction:column; gap:14px; position:relative; z-index:1;}
+  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .contact-form input, .contact-form textarea{
+    width:100%; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.16);
+    border-radius:10px; padding:13px 16px; color:#fff; font-family:'Inter'; font-size:14.5px;
+    transition:border-color .2s ease, background .2s ease;
+  }
+  .contact-form input::placeholder, .contact-form textarea::placeholder{color:rgba(255,255,255,0.4);}
+  .contact-form input:focus, .contact-form textarea:focus{
+    border-color:var(--blue-300); background:rgba(255,255,255,0.1); outline:none;
+  }
+  .contact-form textarea{resize:vertical; min-height:96px;}
+  .contact-submit{
+    margin-top:6px; background:#fff; color:var(--navy-900); font-weight:600; font-size:14.5px;
+    padding:14px 24px; border-radius:10px; border:none; cursor:pointer;
+    transition:background .2s ease, transform .2s ease;
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  }
+  .contact-submit:hover{background:var(--blue-300); transform:translateY(-2px);}
+  .form-note{font-size:12.5px; color:rgba(255,255,255,0.5); margin-top:2px;}
+
+  /* ===== FOOTER ===== */
+  footer{background:var(--navy-950); color:rgba(255,255,255,0.6); padding:50px 0 30px;}
+  .footer-top{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:24px; padding-bottom:34px; border-bottom:1px solid rgba(255,255,255,0.08);}
+  .footer-brand{display:flex; align-items:center; gap:10px;}
+  .footer-brand img{height:30px;}
+  .footer-brand span{font-family:'Space Grotesk'; font-weight:600; font-size:15.5px; color:#fff;}
+  .footer-links{display:flex; gap:28px; list-style:none; margin:0; padding:0;}
+  .footer-links a{font-size:13.5px; color:rgba(255,255,255,0.55); transition:color .2s ease;}
+  .footer-links a:hover{color:#fff;}
+  .footer-bottom{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; padding-top:22px; font-size:12.5px; color:rgba(255,255,255,0.4);}
+
+  /* ===== back to top ===== */
+  .to-top{
+    position:fixed; right:24px; bottom:24px; width:46px; height:46px; border-radius:50%;
+    background:var(--navy-900); border:none; cursor:pointer; z-index:90;
+    display:flex; align-items:center; justify-content:center;
+    opacity:0; transform:translateY(10px); pointer-events:none;
+    transition:opacity .3s ease, transform .3s ease, background .3s ease;
+  }
+  .to-top.show{opacity:1; transform:translateY(0); pointer-events:auto;}
+  .to-top:hover{background:var(--blue-500);}
+  .to-top svg{width:18px; height:18px; stroke:#fff; fill:none; stroke-width:2;}
+
+  /* ===== responsive ===== */
+  @media (max-width:960px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-visual{order:-1; margin-bottom:20px;}
+    .logo-stage{max-width:280px;}
+    .services-grid{grid-template-columns:repeat(2,1fr);}
+    .presence-grid{grid-template-columns:1fr;}
+    .traj-steps{grid-template-columns:repeat(2,1fr); row-gap:36px;}
+    .traj-line{display:none;}
+    .why-wrap{grid-template-columns:1fr;}
+    .contact-wrap{grid-template-columns:1fr; padding:44px 28px;}
+    .form-row{grid-template-columns:1fr;}
+  }
+  @media (max-width:720px){
+    .nav-links, .nav-cta{display:none;}
+    .nav-toggle{display:block;}
+    .services-grid{grid-template-columns:1fr;}
+    .stat-panel{grid-template-columns:1fr; gap:22px;}
+    .footer-links{flex-wrap:wrap;}
+  }
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <nav>
+    <a href="#top" class="brand">
+      <img src="logo.png" alt="Digital IT Move logo">
+      <span class="brand-text">Digital <span>IT</span> Move</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#global">Global Offices</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Get in touch →</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Digital Marketing Company · Sydney, Australia</div>
+        <h1>We move your brand&nbsp;<span class="accent">forward, digitally.</span></h1>
+        <p class="lead">Digital IT Move plans, builds and runs the campaigns that turn attention into revenue — SEO, paid media, social and content, engineered by one team across Australia, India and Dubai.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">
+            Start a project
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#services" class="btn-secondary">See what we do</a>
+        </div>
+        <div class="hero-stats">
+          <div><div class="num" data-count="3">0</div><div class="lbl">Countries in play</div></div>
+          <div><div class="num" data-count="120" data-suffix="+">0</div><div class="lbl">Campaigns launched</div></div>
+          <div><div class="num" data-count="24" data-suffix="/7">0</div><div class="lbl">Team on the ground</div></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="logo-stage">
+          <div class="ring r1"></div>
+          <div class="ring r2"></div>
+          <div class="arrow-track">
+            <svg viewBox="0 0 440 440">
+              <defs>
+                <linearGradient id="arrowGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#0b1330"/>
+                  <stop offset="100%" stop-color="#63b7ff"/>
+                </linearGradient>
+              </defs>
+              <path class="arrow-path" d="M60,340 C160,330 260,290 340,190 M340,190 l-4,34 M340,190 l-34,-4" />
+            </svg>
+          </div>
+          <img src="logo.png" alt="Digital IT Move — D I M mark">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee-track" id="marqueeTrack">
+      <span>SEO &amp; Organic Growth</span>
+      <span>Paid Media &amp; PPC</span>
+      <span>Social Media Management</span>
+      <span>Content &amp; Creative</span>
+      <span>Web Design &amp; Development</span>
+      <span>Branding &amp; Strategy</span>
+      <span>Marketing Automation</span>
+      <span>Analytics &amp; Reporting</span>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="panel" id="services">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">What we do</div>
+        <h2>Every channel that drives real customers, under one roof.</h2>
+        <p>No fragmented vendors. One accountable team plans your strategy, builds the assets and runs the media — so results compound instead of getting lost in translation.</p>
+      </div>
+
+      <div class="services-grid reveal-stag">
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3" stroke-linecap="round"/></svg></div>
+          <h3>SEO &amp; Organic Growth</h3>
+          <p>Technical audits, content strategy and link building that move you up the page for the searches that actually convert.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z" stroke-linejoin="round"/></svg></div>
+          <h3>Paid Media &amp; PPC</h3>
+          <p>Google, Meta and programmatic campaigns tuned weekly against cost-per-acquisition, not vanity clicks.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+          <h3>Social Media Management</h3>
+          <p>Content calendars, community management and paid social that build an audience that actually buys.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M4 19V5a1 1 0 011-1h10l5 5v10a1 1 0 01-1 1H5a1 1 0 01-1-1z"/><path d="M14 4v5h5"/></svg></div>
+          <h3>Content &amp; Creative</h3>
+          <p>Copy, video and design that carries your brand voice across every channel, consistently.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div>
+          <h3>Web Design &amp; Development</h3>
+          <p>Fast, conversion-focused websites and landing pages built to turn traffic your other campaigns earn into leads.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 7h7v7"/></svg></div>
+          <h3>Branding &amp; Strategy</h3>
+          <p>Positioning, identity and messaging systems that make every campaign afterward easier and cheaper to run.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="panel alt" id="process">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">How we work</div>
+        <h2>A straight line from strategy to results.</h2>
+        <p>Four stages, one team, full visibility — you always know exactly where a campaign stands.</p>
+      </div>
+
+      <div class="trajectory reveal">
+        <div class="traj-line"></div>
+        <div class="traj-steps">
+          <div class="traj-step">
+            <div class="traj-node"></div>
+            <div class="traj-mono">STAGE 01</div>
+            <h3>Discover</h3>
+            <p>We audit your market, competitors and current channels to find the fastest path to growth.</p>
+          </div>
+          <div class="traj-step">
+            <div class="traj-node"></div>
+            <div class="traj-mono">STAGE 02</div>
+            <h3>Plan</h3>
+            <p>A channel roadmap with clear targets, budgets and timelines — agreed before a dollar is spent.</p>
+          </div>
+          <div class="traj-step">
+            <div class="traj-node"></div>
+            <div class="traj-mono">STAGE 03</div>
+            <h3>Execute</h3>
+            <p>Campaigns go live across our Australia, India and Dubai teams, working the same playbook around the clock.</p>
+          </div>
+          <div class="traj-step">
+            <div class="traj-node"></div>
+            <div class="traj-mono">STAGE 04</div>
+            <h3>Optimise</h3>
+            <p>Weekly reporting and iteration keep spend flowing toward what's actually converting.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GLOBAL PRESENCE -->
+  <section class="panel" id="global">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Global presence</div>
+        <h2>Headquartered in Australia. Working across three time zones.</h2>
+        <p>A local point of contact wherever you are, backed by one delivery team spanning Sydney, India and Dubai.</p>
+      </div>
+
+      <div class="presence-grid reveal-stag">
+        <div class="office-card hq">
+          <div class="office-tag">Headquarters</div>
+          <h3>Australia</h3>
+          <div class="city-sub">Sydney</div>
+          <ul>
+            <li>Strategy &amp; client leadership</li>
+            <li>ANZ market specialists</li>
+            <li>Core reporting &amp; analytics</li>
+          </ul>
+        </div>
+        <div class="office-card">
+          <div class="office-tag">Branch</div>
+          <h3>India</h3>
+          <div class="city-sub">Delivery &amp; Engineering Hub</div>
+          <ul>
+            <li>Content &amp; creative production</li>
+            <li>Web design &amp; development</li>
+            <li>SEO &amp; technical execution</li>
+          </ul>
+        </div>
+        <div class="office-card">
+          <div class="office-tag">Branch</div>
+          <h3>Dubai</h3>
+          <div class="city-sub">MENA Growth Desk</div>
+          <ul>
+            <li>Middle East market strategy</li>
+            <li>Paid media &amp; partnerships</li>
+            <li>Regional client servicing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="panel alt" id="why">
+    <div class="wrap why-wrap">
+      <div class="reveal">
+        <div class="eyebrow">Why Digital IT Move</div>
+        <h2 style="font-size:clamp(26px,3vw,36px); font-weight:700; color:var(--navy-900); margin-bottom:28px;">Marketing that's judged on the number that matters — growth.</h2>
+        <div class="why-list">
+          <div class="why-item">
+            <div class="why-num">01</div>
+            <div><h3>One accountable team</h3><p>Strategy, creative and media sit together, so nothing gets lost between agencies.</p></div>
+          </div>
+          <div class="why-item">
+            <div class="why-num">02</div>
+            <div><h3>Follow-the-sun delivery</h3><p>Australia, India and Dubai teams overlap shifts so campaigns keep moving around the clock.</p></div>
+          </div>
+          <div class="why-item">
+            <div class="why-num">03</div>
+            <div><h3>Transparent reporting</h3><p>Live dashboards and weekly reviews — you always know what's working and why.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stat-panel reveal">
+        <div class="stat"><div class="num" data-count="97" data-suffix="%">0</div><div class="lbl">Client retention rate</div></div>
+        <div class="stat"><div class="num" data-count="4.6" data-decimals="1" data-suffix="x">0</div><div class="lbl">Average ROAS uplift</div></div>
+        <div class="stat"><div class="num" data-count="3" data-suffix="hrs">0</div><div class="lbl">Average response time</div></div>
+        <div class="stat"><div class="num" data-count="10" data-suffix="+">0</div><div class="lbl">Industries served</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="panel" id="contact">
+    <div class="wrap">
+      <div class="contact-wrap reveal">
+        <div class="contact-left">
+          <div class="eyebrow" style="color:#7dd3fc;">Let's talk</div>
+          <h2>Tell us where you want your numbers to go.</h2>
+          <p>Send a note or reach us directly — our Australia team will route you to the right desk, whether that's Sydney, India or Dubai.</p>
+          <button class="contact-email" id="copyEmail" title="Click to copy">
+            <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+            info@digitalitmove.com
+          </button>
+          <div class="copy-note" id="copyNote">Copied to clipboard</div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email" required>
+          </div>
+          <input type="text" name="company" placeholder="Company (optional)">
+          <textarea name="message" placeholder="What are you looking to grow?" required></textarea>
+          <button type="submit" class="contact-submit" id="submitBtn">
+            Send message
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+          <div class="form-note">This opens your email client addressed to info@digitalitmove.com.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="logo_transparent.png" alt="Digital IT Move logo">
+        <span>Digital IT Move</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#global">Global Offices</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Digital IT Move. All rights reserved.</span>
+      <span>Sydney, Australia · India · Dubai — info@digitalitmove.com</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+  // header scroll state
+  const header = document.getElementById('siteHeader');
+  const toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    header.classList.toggle('scrolled', y > 40);
+    toTop.classList.toggle('show', y > 500);
+  });
+  toTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+  // mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.querySelector('.nav-links');
+  const navCta = document.querySelector('.nav-cta');
+  navToggle.addEventListener('click', () => {
+    const open = navLinks.style.display === 'flex';
+    navLinks.style.display = open ? 'none' : 'flex';
+    navCta.style.display = open ? 'none' : 'inline-flex';
+    if(!open){
+      navLinks.style.cssText += 'position:absolute; top:64px; left:0; right:0; background:#fff; flex-direction:column; padding:24px 32px; gap:18px; box-shadow:0 12px 24px -12px rgba(11,19,48,0.18);';
+      navCta.style.cssText += 'position:absolute; top:210px; right:32px;';
+    }
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    if(window.innerWidth <= 720){ navLinks.style.display='none'; navCta.style.display='none'; }
+  }));
+
+  // scroll reveal
+  const revealEls = document.querySelectorAll('.reveal, .reveal-stag');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.15});
+  revealEls.forEach(el => io.observe(el));
+
+  // animated counters
+  function animateCount(el){
+    const target = parseFloat(el.dataset.count);
+    const decimals = parseInt(el.dataset.decimals || '0');
+    const suffix = el.dataset.suffix || '';
+    const dur = 1400;
+    const start = performance.now();
+    function tick(now){
+      const p = Math.min(1, (now - start) / dur);
+      const eased = 1 - Math.pow(1 - p, 3);
+      const val = target * eased;
+      el.textContent = (decimals ? val.toFixed(decimals) : Math.round(val)) + suffix;
+      if(p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  const counters = document.querySelectorAll('[data-count]');
+  const cio = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting){ animateCount(e.target); cio.unobserve(e.target); }
+    });
+  }, {threshold:0.4});
+  counters.forEach(c => cio.observe(c));
+
+  // pixel accents around logo (echoing logo's pixel motif)
+  const stage = document.querySelector('.logo-stage');
+  const pixelSpots = [
+    {t:'6%', l:'10%', s:14, d:'0s'}, {t:'2%', l:'20%', s:9, d:'.1s'},
+    {t:'14%', l:'4%', s:9, d:'.2s'}, {t:'80%', l:'88%', s:11, d:'.3s'},
+    {t:'88%', l:'78%', s:8, d:'.4s'}
+  ];
+  pixelSpots.forEach(p => {
+    const d = document.createElement('div');
+    d.className = 'pixel-dot';
+    d.style.top = p.t; d.style.left = p.l; d.style.width = p.s+'px'; d.style.height = p.s+'px';
+    d.style.animationDelay = p.d;
+    stage.appendChild(d);
+  });
+
+  // copy email
+  const copyBtn = document.getElementById('copyEmail');
+  const copyNote = document.getElementById('copyNote');
+  copyBtn.addEventListener('click', async () => {
+    try{
+      await navigator.clipboard.writeText('info@digitalitmove.com');
+    }catch(e){}
+    copyNote.classList.add('show');
+    setTimeout(() => copyNote.classList.remove('show'), 1800);
+  });
+
+  // contact form -> mailto
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const f = new FormData(this);
+    const subject = encodeURIComponent('New enquiry from ' + (f.get('name') || 'website'));
+    const body = encodeURIComponent(
+      'Name: ' + f.get('name') +
+      '\nEmail: ' + f.get('email') +
+      '\nCompany: ' + (f.get('company') || '-') +
+      '\n\nMessage:\n' + f.get('message')
+    );
+    window.location.href = 'mailto:info@digitalitmove.com?subject=' + subject + '&body=' + body;
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
