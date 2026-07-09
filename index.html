@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital IT Move — Digital Marketing, Engineered for Momentum</title>
+<meta name="description" content="Digital IT Move is a digital marketing company that turns attention into pipeline through SEO, performance media, content, and brand systems.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== 3D CANVAS LAYER ===== -->
+<canvas id="scene"></canvas>
+<div id="scene-fade"></div>
+
+<!-- ===== NOISE OVERLAY ===== -->
+<div class="grain"></div>
+
+<!-- ===== NAV ===== -->
+<header class="nav">
+  <a href="#top" class="nav__mark">
+    <span class="nav__mark-icon" aria-hidden="true"></span>
+    Digital IT Move
+  </a>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="#work">Work</a>
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#about">About</a>
+  </nav>
+  <a href="#contact" class="nav__cta">Start a project</a>
+  <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#work">Work</a>
+  <a href="#services">Services</a>
+  <a href="#process">Process</a>
+  <a href="#about">About</a>
+  <a href="#contact" class="mobile-menu__cta">Start a project</a>
+</div>
+
+<!-- ===== SCROLL PROGRESS ===== -->
+<div class="progress-rail" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+
+<main id="top">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="section hero" id="hero" data-scene="genesis">
+    <div class="hero__inner">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>Digital marketing, engineered for momentum</p>
+      <h1 class="hero__title">
+        Attention is scattered.<br>
+        <span class="hero__title-accent">We give it direction.</span>
+      </h1>
+      <p class="hero__sub">
+        Digital IT Move plans, builds and runs the marketing systems that move real companies from
+        <em>noticed</em> to <em>chosen</em> — across search, paid media, content and brand.
+      </p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--primary">Start a project</a>
+        <a href="#work" class="btn btn--ghost">See the work<span class="btn__arrow">↓</span></a>
+      </div>
+    </div>
+    <div class="hero__scroll-cue" aria-hidden="true">
+      <span>Scroll to move</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===================== MARQUEE ===================== -->
+  <section class="marquee-wrap" aria-label="Client industries">
+    <div class="marquee">
+      <div class="marquee__track">
+        <span>SaaS</span><span>•</span><span>Fintech</span><span>•</span><span>D2C Retail</span><span>•</span>
+        <span>Healthcare</span><span>•</span><span>B2B Manufacturing</span><span>•</span><span>Hospitality</span><span>•</span>
+        <span>Real Estate</span><span>•</span><span>Education</span><span>•</span>
+        <span>SaaS</span><span>•</span><span>Fintech</span><span>•</span><span>D2C Retail</span><span>•</span>
+        <span>Healthcare</span><span>•</span><span>B2B Manufacturing</span><span>•</span><span>Hospitality</span><span>•</span>
+        <span>Real Estate</span><span>•</span><span>Education</span><span>•</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== METRICS / TRAJECTORY ===================== -->
+  <section class="section metrics" id="results" data-scene="ascend">
+    <div class="section__head">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>What movement looks like</p>
+      <h2 class="section__title">Numbers our clients<br>actually feel.</h2>
+    </div>
+    <div class="metrics__grid">
+      <div class="metric-card">
+        <span class="metric-card__value" data-count="187">0</span><span class="metric-card__suffix">%</span>
+        <p class="metric-card__label">Average organic traffic growth<br>within 12 months</p>
+      </div>
+      <div class="metric-card">
+        <span class="metric-card__value" data-count="42">0</span><span class="metric-card__suffix">%</span>
+        <p class="metric-card__label">Reduction in cost per acquisition<br>across paid channels</p>
+      </div>
+      <div class="metric-card">
+        <span class="metric-card__value" data-count="3">0</span><span class="metric-card__suffix">.4×</span>
+        <p class="metric-card__label">Median return on ad spend<br>for retained clients</p>
+      </div>
+      <div class="metric-card">
+        <span class="metric-card__value" data-count="65">0</span><span class="metric-card__suffix">+</span>
+        <p class="metric-card__label">Brands moved since<br>we started in 2018</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="section services" id="services" data-scene="grid">
+    <div class="section__head">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>Capabilities</p>
+      <h2 class="section__title">Everything attention<br>needs to become revenue.</h2>
+      <p class="section__desc">We work as one connected team, not four disconnected vendors — so search, media, content and brand all pull toward the same number.</p>
+    </div>
+
+    <div class="services__list">
+
+      <article class="service-row">
+        <div class="service-row__name">
+          <h3>Search &amp; SEO</h3>
+          <p>Technical audits, content architecture and link authority that compound instead of expire.</p>
+        </div>
+        <div class="service-row__tags">
+          <span>Technical SEO</span><span>Content Strategy</span><span>Digital PR</span><span>Local SEO</span>
+        </div>
+      </article>
+
+      <article class="service-row">
+        <div class="service-row__name">
+          <h3>Performance Media</h3>
+          <p>Paid search, social and programmatic buys managed against payback period, not vanity clicks.</p>
+        </div>
+        <div class="service-row__tags">
+          <span>Paid Search</span><span>Paid Social</span><span>Programmatic</span><span>Marketplace Ads</span>
+        </div>
+      </article>
+
+      <article class="service-row">
+        <div class="service-row__name">
+          <h3>Content &amp; Creative</h3>
+          <p>Editorial, video and design production built to a publishing cadence, not a one-off campaign.</p>
+        </div>
+        <div class="service-row__tags">
+          <span>Copywriting</span><span>Video</span><span>Design Systems</span><span>Social Content</span>
+        </div>
+      </article>
+
+      <article class="service-row">
+        <div class="service-row__name">
+          <h3>Brand &amp; Positioning</h3>
+          <p>Naming, voice and visual identity sharp enough to survive contact with a crowded market.</p>
+        </div>
+        <div class="service-row__tags">
+          <span>Positioning</span><span>Identity</span><span>Messaging</span><span>Web Design</span>
+        </div>
+      </article>
+
+      <article class="service-row">
+        <div class="service-row__name">
+          <h3>Marketing Analytics</h3>
+          <p>Attribution, dashboards and experimentation so every channel earns its place in the budget.</p>
+        </div>
+        <div class="service-row__tags">
+          <span>Attribution</span><span>Dashboards</span><span>CRO</span><span>Experimentation</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===================== WORK ===================== -->
+  <section class="section work" id="work" data-scene="funnel">
+    <div class="section__head">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>Selected work</p>
+      <h2 class="section__title">Proof, not promises.</h2>
+    </div>
+
+    <div class="work__grid">
+      <article class="work-card work-card--lg">
+        <div class="work-card__media" style="--tint:#4C6EF5;">
+          <span class="work-card__industry">Fintech · SaaS</span>
+        </div>
+        <div class="work-card__body">
+          <h3>Northbeam Pay</h3>
+          <p>Rebuilt organic acquisition from zero, taking a category-new payments platform to page-one rankings for 340 commercial keywords in nine months.</p>
+          <span class="work-card__stat">+ 4.1× organic signups</span>
+        </div>
+      </article>
+
+      <article class="work-card">
+        <div class="work-card__media" style="--tint:#FF6B4A;">
+          <span class="work-card__industry">D2C Retail</span>
+        </div>
+        <div class="work-card__body">
+          <h3>Field &amp; Loom</h3>
+          <p>Restructured paid social spend around creative testing velocity, not budget size.</p>
+          <span class="work-card__stat">− 38% CPA</span>
+        </div>
+      </article>
+
+      <article class="work-card">
+        <div class="work-card__media" style="--tint:#22C7A9;">
+          <span class="work-card__industry">Healthcare</span>
+        </div>
+        <div class="work-card__body">
+          <h3>Meridian Clinics</h3>
+          <p>Local SEO and review infrastructure across 22 clinic locations.</p>
+          <span class="work-card__stat">+ 210% booking calls</span>
+        </div>
+      </article>
+
+      <article class="work-card">
+        <div class="work-card__media" style="--tint:#B084F5;">
+          <span class="work-card__industry">B2B Manufacturing</span>
+        </div>
+        <div class="work-card__body">
+          <h3>Ironclad Fabrication</h3>
+          <p>Positioning and a new site that turned a 40-year-old plant into a category authority.</p>
+          <span class="work-card__stat">+ 156% qualified leads</span>
+        </div>
+      </article>
+
+      <article class="work-card work-card--lg">
+        <div class="work-card__media" style="--tint:#F5C144;">
+          <span class="work-card__industry">Hospitality</span>
+        </div>
+        <div class="work-card__body">
+          <h3>Alder Hotel Group</h3>
+          <p>Full-funnel programmatic and metasearch strategy across 14 properties, shifting spend away from OTA dependency and back to direct bookings.</p>
+          <span class="work-card__stat">+ 61% direct revenue share</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== PROCESS ===================== -->
+  <section class="section process" id="process" data-scene="path">
+    <div class="section__head">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>How we work</p>
+      <h2 class="section__title">One route in,<br>no detours.</h2>
+    </div>
+
+    <div class="process__list">
+      <div class="process-step">
+        <div class="process-step__label">
+          <span class="process-step__mark">Diagnose</span>
+        </div>
+        <div class="process-step__body">
+          <h3>Audit &amp; baseline</h3>
+          <p>We map your current funnel end to end — technical, creative, and financial — before recommending a single channel. Two weeks, one shared source of truth.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-step__label">
+          <span class="process-step__mark">Design</span>
+        </div>
+        <div class="process-step__body">
+          <h3>Roadmap &amp; targets</h3>
+          <p>A prioritized 90-day plan tied to pipeline and revenue targets, not impressions — so everyone agrees what "working" means before we start.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-step__label">
+          <span class="process-step__mark">Build</span>
+        </div>
+        <div class="process-step__body">
+          <h3>Launch in sprints</h3>
+          <p>Two-week execution sprints across content, media and site work, shipped in public with a live dashboard you can check any time.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-step__label">
+          <span class="process-step__mark">Compound</span>
+        </div>
+        <div class="process-step__body">
+          <h3>Optimize &amp; scale</h3>
+          <p>Monthly experimentation cycles double down on what's compounding and cut what isn't — budget follows performance, not habit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT / MANIFESTO ===================== -->
+  <section class="section about" id="about" data-scene="converge">
+    <div class="about__inner">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>Why we exist</p>
+      <h2 class="about__statement">
+        Most marketing spends a budget.
+        <span class="about__statement-dim">We spend it on purpose —</span>
+        toward one number your business actually agreed on.
+      </h2>
+      <p class="about__body">
+        Digital IT Move started in 2018 because too many good companies were buying traffic instead of building momentum.
+        We're a small, senior team on purpose: strategists who write the media brief also read the analytics,
+        so nothing gets lost in a handoff. No 20-person account team, no quarterly guesswork — just people who
+        treat your growth number like it's their own.
+      </p>
+      <div class="about__stats">
+        <div><strong>2018</strong><span>Founded</span></div>
+        <div><strong>14</strong><span>Senior strategists</span></div>
+        <div><strong>65+</strong><span>Brands moved</span></div>
+        <div><strong>4.7</strong><span>Avg. client rating</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIAL ===================== -->
+  <section class="section testimonial" data-scene="converge">
+    <blockquote class="testimonial__quote">
+      “Digital IT Move is the first agency that talked to us about pipeline before they talked about
+      platforms. Six months in, our CAC is the lowest it's been in three years.”
+    </blockquote>
+    <p class="testimonial__attr">— VP Marketing, Northbeam Pay</p>
+  </section>
+
+  <!-- ===================== CONTACT / CTA ===================== -->
+  <section class="section contact" id="contact" data-scene="genesis">
+    <div class="contact__inner">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>Let's move</p>
+      <h2 class="contact__title">Tell us where growth<br>is stuck.</h2>
+      <p class="contact__sub">One call, no deck. We'll tell you honestly whether we're the right team to move it.</p>
+
+      <form class="contact-form" id="contactForm">
+        <div class="contact-form__row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email">Work email</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+        </div>
+        <div class="field">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" autocomplete="organization">
+        </div>
+        <div class="field">
+          <label for="message">What are you trying to move?</label>
+          <textarea id="message" name="message" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--block">
+          <span class="btn__label">Send it over</span>
+        </button>
+        <p class="contact-form__note" id="formNote" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <a href="#top" class="nav__mark">
+        <span class="nav__mark-icon" aria-hidden="true"></span>
+        Digital IT Move
+      </a>
+      <div class="footer__links">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Digital IT Move. All rights reserved.</span>
+      <span>Made to move — Mumbai · Remote-first</span>
+    </div>
+  </footer>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="scene.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
