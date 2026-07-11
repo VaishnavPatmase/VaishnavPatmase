@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital IT Move | Global IT & Marketing Solutions</title>
+    
+    <!-- Tailwind CSS for Modern Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            purple: '#7c3aed',
+                            cyan: '#06b6d4',
+                            blue: '#3b82f6',
+                            dark: '#03000a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Syncopate', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for clean vector icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #03000a;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        canvas#webgl {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .content-section {
+            position: relative;
+            z-index: 10;
+            min-height: 100vh;
+            pointer-events: none;
+        }
+        .interactive {
+            pointer-events: auto;
+        }
+        /* Custom scrollbar matching dark cyber aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #03000a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e1b4b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #7c3aed;
+        }
+        .glass-card {
+            background: rgba(8, 4, 21, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 3D Interactive WebGL Canvas -->
+    <canvas id="webgl"></canvas>
+
+    <!-- Global Navigation Header -->
+    <header class="fixed top-0 left-0 w-full z-50 px-6 py-4 md:px-12 flex justify-between items-center glass-card border-b border-white/5">
+        <div class="flex items-center space-x-2">
+            <div class="h-8 w-8 bg-gradient-to-tr from-brand-purple to-brand-cyan rounded-lg flex items-center justify-center font-bold text-white shadow-lg shadow-brand-purple/30">M</div>
+            <span class="font-display text-xs md:text-sm tracking-wider font-bold">DIGITAL IT MOVE</span>
+        </div>
+        <nav class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide text-gray-400">
+            <a href="#hero" class="hover:text-white transition-colors">Home</a>
+            <a href="#presence" class="hover:text-white transition-colors">Presence</a>
+            <a href="#services" class="hover:text-white transition-colors">Services</a>
+            <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+        </nav>
+        <div class="interactive">
+            <a href="#contact" class="px-5 py-2.5 rounded-full bg-white text-black font-semibold text-sm hover:bg-brand-cyan hover:text-black transition-all duration-300 shadow-md">Connect</a>
+        </div>
+    </header>
+
+    <!-- Content Sections Overlaying 3D Canvas -->
+    <main class="relative">
+
+        <!-- Hero Section -->
+        <section id="hero" class="content-section flex items-center px-6 md:px-24">
+            <div class="max-w-3xl py-20 mt-16">
+                <span class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-brand-cyan uppercase bg-brand-cyan/10 rounded-full border border-brand-cyan/20">Interactive Digital Ecosystem</span>
+                <h1 class="font-display text-4xl md:text-7xl font-bold tracking-tight leading-none mb-6">
+                    DIGITAL <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-brand-cyan">IT MOVE</span>
+                </h1>
+                <p class="text-gray-400 text-lg md:text-xl font-light mb-8 max-w-xl leading-relaxed">
+                    A premium digital marketing and system integration company. Hover over the screen to play with the network matrix; scroll to explore our structures.
+                </p>
+                <div class="flex flex-wrap gap-4 interactive">
+                    <a href="#services" class="px-8 py-3.5 rounded-lg bg-gradient-to-r from-brand-purple to-brand-cyan font-semibold text-white hover:opacity-90 transition-opacity">Our Services</a>
+                    <a href="#presence" class="px-8 py-3.5 rounded-lg border border-white/10 hover:border-white/30 font-semibold transition-colors">Global Presence</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Footprint Section -->
+        <section id="presence" class="content-section flex items-center px-6 md:px-24">
+            <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-20">
+                <div class="max-w-xl">
+                    <span class="text-xs font-semibold tracking-wider text-brand-purple uppercase">Global Connectivity</span>
+                    <h2 class="text-3xl md:text-5xl font-bold mt-2 mb-6">Where We Operate</h2>
+                    <p class="text-gray-400 font-light mb-8 leading-relaxed">
+                        Digital IT Move brings highly integrated technological and marketing solutions closer to your local audience.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-white/5 rounded-lg text-brand-cyan border border-white/10"><i class="fa-solid fa-earth-oceania"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Australia (Base)</h4>
+                                <p class="text-gray-400 text-sm">Strategic direction, localized campaigns, and primary operational hub.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-white/5 rounded-lg text-brand-cyan border border-white/10"><i class="fa-solid fa-code"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">India Branch</h4>
+                                <p class="text-gray-400 text-sm">A highly specialized development, optimization, and system support center.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-white/5 rounded-lg text-brand-cyan border border-white/10"><i class="fa-solid fa-city"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Dubai Branch</h4>
+                                <p class="text-gray-400 text-sm">Empowering scale-ups and enterprises with cutting-edge middle-eastern strategies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Spacing container alongside our 3D nodes -->
+                <div class="hidden lg:block h-96"></div>
+            </div>
+        </section>
+
+        <!-- Services Section with Rich Data -->
+        <section id="services" class="content-section py-20 px-6 md:px-24 flex flex-col justify-center">
+            <div class="max-w-3xl mb-12">
+                <span class="text-xs font-semibold tracking-wider text-brand-cyan uppercase font-display">Specializations</span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-2 mb-4">Core Focus Areas</h2>
+                <p class="text-gray-400 font-light">Custom marketing techniques aligned closely with structured IT implementation.</p>
+            </div>
+
+            <!-- Services Dynamic Interactive Grid with Rich Copy -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 interactive">
+                
+                <!-- Cyber Security -->
+                <div class="glass-card p-8 rounded-2xl hover:border-brand-purple/40 transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-brand-purple text-xl mb-6">
+                            <i class="fa-solid fa-shield-cat"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Cyber Security</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">
+                            Protecting systems, tracking data access integrity, and running real-time defensive audits to safeguard valuable intellectual property.
+                        </p>
+                        <ul class="text-xs text-gray-400 space-y-2 mb-6">
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-cyan mr-2"></span>Penetration Testing & Audits</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-cyan mr-2"></span>Identity & Access Management (IAM)</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-cyan mr-2"></span>24/7 SOC Threat Monitoring</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+                        <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-gray-400">Splunk</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-gray-400">CrowdStrike</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-gray-400">Zero-Trust</span>
+                    </div>
+                </div>
+
+                <!-- Network Services -->
+                <div class="glass-card p-8 rounded-2xl hover:border-brand-cyan/40 transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-brand-cyan text-xl mb-6">
+                            <i class="fa-solid fa-circle-nodes"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Network Services</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">
+                            Building solid cloud configurations and high-speed local data conduits for active business operations with minimized network latency.
+                        </p>
+                        <ul class="text-xs text-gray-400 space-y-2 mb-6">
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-cyan mr-2"></span>SD-WAN Optimizations</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-cyan mr-2"></span>Hybrid-Network Implementations</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-cyan mr-2"></span>Virtual Private Network (VPN) Setup</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+                        <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-gray-400">Cisco</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-gray-400">Fortinet</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-gray-400">SD-WAN</span>
+                    </div>
+                </div>
+
+                <!-- Data Analytics -->
+                <div class="glass-card p-8 rounded-2xl hover:border-brand-blue/40 transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-brand-blue text-xl mb-6">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Data Analytics</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">
+                            Extracting pattern metrics to refine operational strategies and maximize ROI performance across multiple channels.
+                        </p>
+                        <ul class="text-xs text-gray-400 space-y-2 mb-6">
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-cyan mr-2"></span>Predictive Modeling & Forecasting</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-cyan mr-2"></span>Power BI & Tableau Implementations</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-cyan mr-2"></span>Automated ETL Data Pipelines</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+                        <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-gray-400">Python</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-gray-400">Snowflake</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-gray-400">Power BI</span>
+                    </div>
+                </div>
+
+                <!-- Digital Marketing -->
+                <div class="glass-card p-8 rounded-2xl hover:border-purple-500/40 transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-xl mb-6">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Digital Marketing</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">
+                            Crafting custom SEO solutions, targeted advertising campaigns, and interactive content architecture optimized to convert leads.
+                        </p>
+                        <ul class="text-xs text-gray-400 space-y-2 mb-6">
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-cyan mr-2"></span>Conversion Rate Optimization (CRO)</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-cyan mr-2"></span>Search Engine Optimization (SEO)</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-cyan mr-2"></span>Pay-Per-Click (PPC) Management</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+                        <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-gray-400">Google Ads</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-gray-400">Semrush</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-gray-400">GA4</span>
+                    </div>
+                </div>
+
+                <!-- Cloud Solutions -->
+                <div class="glass-card p-8 rounded-2xl hover:border-cyan-500/40 transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-xl mb-6">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Cloud Solutions</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">
+                            Seamlessly hosting, modernizing, and keeping databases safely nested in cloud server networks with automated backup protocols.
+                        </p>
+                        <ul class="text-xs text-gray-400 space-y-2 mb-6">
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-cyan mr-2"></span>Zero-Downtime Server Migrations</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-cyan mr-2"></span>Cloud-Native Application Architectures</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-cyan mr-2"></span>Continuous Infrastructure Auditing</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+                        <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-gray-400">AWS</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-gray-400">MS Azure</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-gray-400">Kubernetes</span>
+                    </div>
+                </div>
+
+                <!-- Automation -->
+                <div class="glass-card p-8 rounded-2xl hover:border-emerald-500/40 transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl mb-6">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Automation</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">
+                            Eliminating workflow friction through automated actions, database synchronization, and scalable system automation scripting.
+                        </p>
+                        <ul class="text-xs text-gray-400 space-y-2 mb-6">
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-cyan mr-2"></span>Robotic Process Automation (RPA)</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-cyan mr-2"></span>Custom API Integrations & Webhooks</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-cyan mr-2"></span>CI/CD Delivery Pipeline Setups</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+                        <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-gray-400">UiPath</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-gray-400">Jenkins</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-gray-400">Zapier</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section / Footer -->
+        <section id="contact" class="content-section py-20 px-6 md:px-24 flex flex-col justify-between">
+            <div class="max-w-4xl mx-auto w-full text-center py-10">
+                <span class="text-xs font-semibold tracking-wider text-brand-purple uppercase">Inquiries & Partnerships</span>
+                <h2 class="text-4xl md:text-6xl font-bold mt-2 mb-8">Let's Craft Something Impactful</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto interactive">
+                    <!-- Email Action Card -->
+                    <a href="mailto:info@digitalitmove.com" class="glass-card p-6 rounded-2xl flex items-center space-x-4 hover:border-brand-cyan/50 transition-all text-left">
+                        <div class="w-12 h-12 rounded-xl bg-brand-cyan/10 border border-brand-cyan/20 flex items-center justify-center text-brand-cyan text-xl">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-gray-400 uppercase tracking-wide">Write to us</span>
+                            <p class="font-semibold text-white break-all">info@digitalitmove.com</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Instagram Action Card -->
+                    <a href="https://instagram.com/digitalitmove_official" target="_blank" rel="noopener noreferrer" class="glass-card p-6 rounded-2xl flex items-center space-x-4 hover:border-brand-purple/50 transition-all text-left">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-xl">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-gray-400 uppercase tracking-wide">Connect on Instagram</span>
+                            <p class="font-semibold text-white">@digitalitmove_official</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Phone Contact Card - Added as requested -->
+                <div class="max-w-2xl mx-auto mt-6 interactive">
+                    <a href="tel:+61 410237261" class="glass-card p-6 rounded-2xl flex items-center justify-center space-x-4 hover:border-brand-cyan/50 transition-all text-left">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-gray-400 uppercase tracking-wide">Whatsapp Us</span>
+                            <p class="font-semibold text-white">+61 410237261</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Simple Footer branding -->
+            <footer class="border-t border-white/5 pt-8 mt-12 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 interactive">
+                <p>&copy; 2026 Digital IT Move. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <span>Australia</span>
+                    <span>•</span>
+                    <span>India</span>
+                    <span>•</span>
+                    <span>Dubai</span>
+                </div>
+            </footer>
+        </section>
+
+    </main>
+
+    <!-- Essential Libraries: Three.js and GSAP for smooth scroll animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom Three.js Interactive Particle Matrix Code -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // --- WebGL Context Setup ---
+        const canvas = document.querySelector('#webgl');
+        const scene = new THREE.Scene();
+        
+        const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 100);
+        camera.position.z = 6;
+        camera.position.y = 0;
+        
+        const renderer = new THREE.WebGLRenderer({
+            canvas: canvas,
+            antialias: true,
+            alpha: true
+        });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+        // --- Generate Soft Glowing Particle Circle Texture dynamically in Memory ---
+        function createParticleTexture() {
+            const size = 64;
+            const canvasObj = document.createElement('canvas');
+            canvasObj.width = size;
+            canvasObj.height = size;
+            const ctx = canvasObj.getContext('2d');
+            
+            const gradient = ctx.createRadialGradient(size/2, size/2, 0, size/2, size/2, size/2);
+            gradient.addColorStop(0, 'rgba(255,255,255,1)');
+            gradient.addColorStop(0.2, 'rgba(255,255,255,0.8)');
+            gradient.addColorStop(0.5, 'rgba(255,255,255,0.1)');
+            gradient.addColorStop(1, 'rgba(255,255,255,0)');
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, size, size);
+            
+            return new THREE.CanvasTexture(canvasObj);
+        }
+
+        const particleTexture = createParticleTexture();
+
+        // --- Build Dynamic Particle Swarm Matrix (2,500 particles) ---
+        const particleCount = 2500;
+        const geometry = new THREE.BufferGeometry();
+        
+        // Target structural arrays for state morph transitions
+        const currentPositions = new Float32Array(particleCount * 3);
+        const targetPositions_Hero = new Float32Array(particleCount * 3);
+        const targetPositions_Presence = new Float32Array(particleCount * 3);
+        const targetPositions_Services = new Float32Array(particleCount * 3);
+        const targetPositions_Contact = new Float32Array(particleCount * 3);
+        
+        const colors = new Float32Array(particleCount * 3);
+
+        const colorPurple = new THREE.Color('#7c3aed');
+        const colorCyan = new THREE.Color('#06b6d4');
+        const colorBlue = new THREE.Color('#3b82f6');
+
+        // Populate and calculate 3D shapes programmatically
+        for (let i = 0; i < particleCount; i++) {
+            
+            // --- Set Base Colors based on node patterns ---
+            const mixedColor = i % 3 === 0 ? colorPurple : (i % 3 === 1 ? colorCyan : colorBlue);
+            colors[i * 3]     = mixedColor.r;
+            colors[i * 3 + 1] = mixedColor.g;
+            colors[i * 3 + 2] = mixedColor.b;
+
+            // --- Shape 1: Undulating Flowing Grid (Hero wave) ---
+            const col = i % 50;
+            const row = Math.floor(i / 50);
+            const gridScaleX = 0.22;
+            const gridScaleZ = 0.22;
+            
+            const hX = (col - 25) * gridScaleX;
+            const hZ = (row - 25) * gridScaleZ;
+            const hY = Math.sin(hX * 0.5) * Math.cos(hZ * 0.5) * 0.8;
+            
+            targetPositions_Hero[i * 3]     = hX;
+            targetPositions_Hero[i * 3 + 1] = hY;
+            targetPositions_Hero[i * 3 + 2] = hZ;
+
+            // --- Shape 2: Three Distinct Hub Rings (Presence - Australia, India, Dubai) ---
+            let pX, pY, pZ;
+            const branchIndex = i % 3;
+            const radius = 0.7 + Math.random() * 0.3;
+            const angle = Math.random() * Math.PI * 2;
+
+            if (branchIndex === 0) {
+                // Australia (Bottom Left Pillar)
+                pX = -2.0 + Math.cos(angle) * radius;
+                pY = -1.2 + Math.sin(angle) * radius;
+                pZ = (Math.random() - 0.5) * 0.5;
+            } else if (branchIndex === 1) {
+                // India Hub (Upper Middle Pillar)
+                pX = 0.0 + Math.cos(angle) * radius;
+                pY = 1.3 + Math.sin(angle) * radius;
+                pZ = (Math.random() - 0.5) * 0.5;
+            } else {
+                // Dubai Node (Bottom Right Pillar)
+                pX = 2.0 + Math.cos(angle) * radius;
+                pY = -1.2 + Math.sin(angle) * radius;
+                pZ = (Math.random() - 0.5) * 0.5;
+            }
+            targetPositions_Presence[i * 3]     = pX;
+            targetPositions_Presence[i * 3 + 1] = pY;
+            targetPositions_Presence[i * 3 + 2] = pZ;
+
+            // --- Shape 3: Rotating Double Cone Prism (Services Structure) ---
+            const sAngle = Math.random() * Math.PI * 2;
+            const sHeight = (Math.random() - 0.5) * 3;
+            const sRadius = 1.5 * (1 - Math.abs(sHeight) / 1.5); // Tapered edges to construct a clean prism
+            
+            targetPositions_Services[i * 3]     = Math.cos(sAngle) * sRadius;
+            targetPositions_Services[i * 3 + 1] = sHeight;
+            targetPositions_Services[i * 3 + 2] = Math.sin(sAngle) * sRadius;
+
+            // --- Shape 4: Cosmic Spiraling Helix Vortex (Contact Grid) ---
+            const phi = i * 0.04;
+            const spiralRadius = 0.08 * phi;
+            
+            targetPositions_Contact[i * 3]     = Math.cos(phi) * spiralRadius;
+            targetPositions_Contact[i * 3 + 1] = (Math.random() - 0.5) * 0.4 + (phi * 0.03) - 2;
+            targetPositions_Contact[i * 3 + 2] = Math.sin(phi) * spiralRadius;
+
+            // Start particle positions matched directly to Hero wave
+            currentPositions[i * 3]     = hX;
+            currentPositions[i * 3 + 1] = hY;
+            currentPositions[i * 3 + 2] = hZ;
+        }
+
+        geometry.setAttribute('position', new THREE.BufferAttribute(currentPositions, 3));
+        geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+        const material = new THREE.PointsMaterial({
+            size: 0.065,
+            vertexColors: true,
+            transparent: true,
+            opacity: 0.85,
+            map: particleTexture,
+            blending: THREE.AdditiveBlending,
+            depthWrite: false
+        });
+
+        const pointsSwarm = new THREE.Points(geometry, material);
+        scene.add(pointsSwarm);
+
+        // --- Fluid Mouse Pointer Interaction (Repulsion Logic) ---
+        const mouse = new THREE.Vector2(-999, -999); // Offscreen initialization
+        const targetMouse = new THREE.Vector2(0, 0);
+        const raycaster = new THREE.Raycaster();
+        const dummyPlane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0); // Reference plane intersecting view axis
+        const intersectionPoint = new THREE.Vector3();
+
+        window.addEventListener('mousemove', (event) => {
+            targetMouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            targetMouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+        });
+
+        window.addEventListener('mouseleave', () => {
+            targetMouse.set(-999, -999); // Safe exit coordinate
+        });
+
+        // Track and cache natural positions to support physics bounce-back
+        const baseMemoryPositions = new Float32Array(particleCount * 3);
+        for(let i=0; i<particleCount*3; i++){
+            baseMemoryPositions[i] = currentPositions[i];
+        }
+
+        // Variable updated strictly through GSAP Scroll Triggers
+        const scrollState = { progress: 0 };
+
+        // --- Render Loop (Calculates Fluid Physics & Scroll Lerping) ---
+        const clock = new THREE.Clock();
+
+        const tick = () => {
+            const elapsedTime = clock.getElapsedTime();
+            const positionsArr = geometry.attributes.position.array;
+
+            // Gently glide mouse target coordinates to limit jitter
+            mouse.lerp(targetMouse, 0.1);
+
+            // Establish 3D hover intersection metrics
+            raycaster.setFromCamera(mouse, camera);
+            let activeMouse3D = null;
+            if (mouse.x > -900) {
+                raycaster.ray.intersectPlane(dummyPlane, intersectionPoint);
+                activeMouse3D = intersectionPoint;
+            }
+
+            // Animate local baseline wave variations if in Hero state
+            const waveIntensity = Math.max(0, 1 - scrollState.progress);
+
+            for (let i = 0; i < particleCount; i++) {
+                const i3 = i * 3;
+
+                // --- 1. Compute dynamic mathematical destination positions on scroll ---
+                let tx, ty, tz;
+                const p = scrollState.progress;
+
+                if (p < 1) {
+                    // Blend Hero Wave -> Presence Clusters
+                    const t = p;
+                    tx = THREE.MathUtils.lerp(targetPositions_Hero[i3], targetPositions_Presence[i3], t);
+                    ty = THREE.MathUtils.lerp(targetPositions_Hero[i3+1], targetPositions_Presence[i3+1], t);
+                    tz = THREE.MathUtils.lerp(targetPositions_Hero[i3+2], targetPositions_Presence[i3+2], t);
+                } else if (p < 2) {
+                    // Blend Presence Clusters -> Services Prism
+                    const t = p - 1;
+                    tx = THREE.MathUtils.lerp(targetPositions_Presence[i3], targetPositions_Services[i3], t);
+                    ty = THREE.MathUtils.lerp(targetPositions_Presence[i3+1], targetPositions_Services[i3+1], t);
+                    tz = THREE.MathUtils.lerp(targetPositions_Presence[i3+2], targetPositions_Services[i3+2], t);
+                } else {
+                    // Blend Services Prism -> Contact Vortex
+                    const t = p - 2;
+                    tx = THREE.MathUtils.lerp(targetPositions_Services[i3], targetPositions_Contact[i3], t);
+                    ty = THREE.MathUtils.lerp(targetPositions_Services[i3+1], targetPositions_Contact[i3+1], t);
+                    tz = THREE.MathUtils.lerp(targetPositions_Services[i3+2], targetPositions_Contact[i3+2], t);
+                }
+
+                // Add active micro-wave animation to base layout coordinates when closer to Hero
+                if (waveIntensity > 0) {
+                    ty += Math.sin(elapsedTime * 1.5 + tx * 0.8) * 0.15 * waveIntensity;
+                }
+
+                // Cache calculated target base coordinates
+                baseMemoryPositions[i3] = tx;
+                baseMemoryPositions[i3+1] = ty;
+                baseMemoryPositions[i3+2] = tz;
+
+                // --- 2. Calculate Pointer Repulsion Physics ---
+                let currentX = positionsArr[i3];
+                let currentY = positionsArr[i3+1];
+                let currentZ = positionsArr[i3+2];
+
+                // Interpolate current coordinates to natural base layout targets
+                currentX += (baseMemoryPositions[i3] - currentX) * 0.1;
+                currentY += (baseMemoryPositions[i3+1] - currentY) * 0.1;
+                currentZ += (baseMemoryPositions[i3+2] - currentZ) * 0.1;
+
+                if (activeMouse3D) {
+                    const dx = currentX - activeMouse3D.x;
+                    const dy = currentY - activeMouse3D.y;
+                    const dz = currentZ - activeMouse3D.z;
+                    const distSq = dx * dx + dy * dy + dz * dz;
+
+                    // If coordinates fall within pointer field of influence, apply offset force
+                    if (distSq < 1.4) {
+                        const dist = Math.sqrt(distSq);
+                        const force = (1.4 - dist) / 1.4; // Stronger deflection centerward
+                        const pushIntensity = 0.45;
+                        
+                        // Push outward away from mouse coordinates
+                        currentX += (dx / dist) * force * pushIntensity;
+                        currentY += (dy / dist) * force * pushIntensity;
+                    }
+                }
+
+                positionsArr[i3] = currentX;
+                positionsArr[i3+1] = currentY;
+                positionsArr[i3+2] = currentZ;
+            }
+
+            geometry.attributes.position.needsUpdate = true;
+
+            // Apply constant, gentle rotational speed to whole assembly
+            pointsSwarm.rotation.y = elapsedTime * 0.04;
+            pointsSwarm.rotation.x = Math.sin(elapsedTime * 0.1) * 0.05;
+
+            renderer.render(scene, camera);
+            window.requestAnimationFrame(tick);
+        };
+
+        tick();
+
+        // --- Responsive Screen Alignment Adjustments ---
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        });
+
+        // --- GSAP Scroll Mapping Timeline ---
+        // Converts full page scroll depth into state progression (0 to 3)
+        gsap.to(scrollState, {
+            progress: 3,
+            ease: "none",
+            scrollTrigger: {
+                trigger: "body",
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 1.2
+            }
+        });
+
+        // Subtle camera shifts on scroll to support natural reading flow
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: "body",
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 1.2
+            }
+        })
+        .to(camera.position, {
+            x: window.innerWidth > 1024 ? -1.0 : 0,
+            y: 0,
+            z: 5.5,
+            duration: 2
+        })
+        .to(camera.position, {
+            x: 0,
+            y: -0.5,
+            z: 5.0,
+            duration: 2
+        });
+
+    </script>
+</body>
+</html>
